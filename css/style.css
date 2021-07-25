@@ -217,3 +217,9 @@ i {
 	}
 	/* end of popup */
 }
+
+@-moz-document url-prefix() {
+	.content {
+		height: 257px;
+	}
+}
