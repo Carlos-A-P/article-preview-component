@@ -25,6 +25,10 @@ p {
 	color: var(--vdgBlue);
 }
 
+.info p {
+	color: var(--gBlue);
+}
+
 .wrap {
 	max-width: 323px;
 	margin: auto;
