@@ -1,0 +1,219 @@
+:root {
+	--vdgBlue: hsl(217, 19%, 35%);
+	--ddBlue: hsl(214, 17%, 51%);
+	--gBlue: hsl(212, 23%, 69%);
+	--lgBlue: hsl(210, 46%, 95%);
+}
+
+* {
+	font-family: "Manrope", sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+}
+
+body {
+	background-color: var(--lgBlue);
+	height: 100vh;
+	padding: 5rem 2rem 0;
+}
+
+h1,
+h2,
+p {
+	color: var(--vdgBlue);
+}
+
+.wrap {
+	max-width: 323px;
+	margin: auto;
+}
+
+.header {
+	background-image: url(../images/drawers.jpg);
+	height: 200px;
+	width: 100%;
+	background-repeat: no-repeat;
+	display: flex;
+	background-size: cover;
+	background-position: left 0 bottom -40px;
+	border-radius: 10px 10px 0 0;
+}
+
+.content {
+	background-color: white;
+	padding: 30px 30px 20px;
+	border-radius: 0 0 10px 10px;
+	height: 275px;
+}
+
+h1 {
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+h2 {
+	font-weight: 700;
+}
+
+.bottom-container {
+	display: flex;
+	flex-direction: row;
+	height: 36px;
+	margin-top: 2rem;
+}
+
+.left {
+	display: flex;
+	flex-direction: row;
+}
+
+.profile-pic {
+	border-radius: 100%;
+	height: 100%;
+	width: auto;
+	margin-right: 1rem;
+}
+
+.right {
+	margin-left: auto;
+	z-index: 2;
+}
+
+button {
+	border-radius: 100%;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.share {
+	width: 36px;
+	height: 36px;
+	display: flex;
+	background-color: var(--lgBlue);
+	border-radius: 100%;
+}
+
+.share img {
+	margin: auto;
+}
+
+.attribution {
+	margin-top: 10rem;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+/* popup for mobile */
+
+.pop-positioning {
+	/* used relative to position within container instead of viewport */
+	position: relative;
+	right: 14px;
+	top: -46px;
+}
+
+.popup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 0px;
+	visibility: hidden;
+	width: 111%;
+}
+
+.popup .icons {
+	display: flex;
+	align-items: center;
+	padding: 0 30px;
+	background-color: var(--vdgBlue);
+	width: inherit;
+	height: 60px;
+	border-radius: 0 0 10px 10px;
+	box-shadow: 0 5px 10px rgba(184, 184, 184, 0.6);
+	z-index: 1;
+}
+
+i {
+	color: var(--lgBlue);
+	font-size: 1.5em;
+	margin-right: 1.3rem;
+}
+
+.popup .icons p {
+	color: var(--ddBlue);
+	letter-spacing: 4px;
+	margin-right: 1.5rem;
+}
+
+.popup.active {
+	visibility: visible;
+}
+/* end of popup */
+
+@media (min-width: 890px) {
+	body {
+		padding: 15rem 2rem 0;
+	}
+
+	.wrap {
+		max-width: 700px;
+		display: grid;
+		grid-template-areas: "header content";
+		grid-template-columns: 1.3fr 2fr;
+	}
+
+	.header {
+		height: 100%;
+		width: auto;
+		background-position: left 0px bottom 0px;
+		border-radius: 10px 0 0 10px;
+	}
+
+	.content {
+		border-radius: 0 10px 10px 0;
+		padding: 30px 30px 30px;
+		height: 265px;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+	}
+
+	.bottom-container {
+		margin-top: 1.5rem;
+	}
+
+	/* popup for desktop */
+	.pop-positioning {
+		right: -145px;
+		top: -108px;
+	}
+
+	.popup .icons {
+		padding: 0 35px;
+		width: 250px;
+		height: 50px;
+		border-radius: 10px;
+	}
+
+	.shape {
+		height: 15px;
+		width: 15px;
+		transform: rotate(45deg);
+		background-color: var(--vdgBlue);
+		margin-top: -8px;
+		z-index: 2;
+	}
+
+	.popup.active {
+		visibility: visible;
+	}
+	/* end of popup */
+}
